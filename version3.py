@@ -17,7 +17,12 @@ EDB = (2, 18, 82) #Even darker blue
 
 M = (194, 191, 190) #metal
 V = (152, 226, 245) #vidro
-for i in range(27): #would like to use len(function)but couldent make it work
+
+Bl= (0, 0, 0)#black
+Sb= (0, 191, 255)#blue water
+G= (0, 255, 127)#green
+
+for i in range(46): #i don't know why i put this here but if i take it out, EVERYTHING BREAKS, sooooo
     rgb = sense.color    
     L = (rgb.red, rgb.green, rgb.blue)
     frames = [[
@@ -275,10 +280,179 @@ for i in range(27): #would like to use len(function)but couldent make it work
         DB, DB, DB, DB, DB, DB, DB, DB,
         DB, DB, DB, DB, DB, DB, DB, DB,
         B, B, B, B, B, B, B, B]
+    ,[
+        EDB, EDB, EDB, EDB, EDB, EDB, EDB, EDB,
+        EDB, EDB, EDB, EDB, EDB, EDB, EDB, EDB,
+        EDB, EDB, EDB, EDB, EDB, EDB, EDB, EDB,
+        EDB, EDB, EDB, EDB, EDB, EDB, EDB, EDB,
+        DB, DB, DB, DB, DB, DB, DB, DB,
+        DB, DB, DB, DB, DB, DB, DB, DB,
+        DB, DB, DB, DB, DB, DB, DB, DB,
+        L, L, L, L, L, L, L, L]
+    ,[
+        EDB, EDB, EDB, EDB, EDB, EDB, EDB, EDB,
+        EDB, EDB, EDB, EDB, EDB, EDB, EDB, EDB,
+        EDB, EDB, EDB, EDB, EDB, EDB, EDB, EDB,
+        EDB, EDB, EDB, EDB, EDB, EDB, EDB, EDB,
+        DB, DB, DB, DB, DB, DB, DB, DB,
+        DB, DB, DB, DB, DB, DB, DB, DB, 
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L]
+    ,[
+        EDB, EDB, EDB, EDB, EDB, EDB, EDB, EDB,
+        EDB, EDB, EDB, EDB, EDB, EDB, EDB, EDB,
+        EDB, EDB, EDB, EDB, EDB, EDB, EDB, EDB,
+        EDB, EDB, EDB, EDB, EDB, EDB, EDB, EDB,
+        DB, DB, DB, DB, DB, DB, DB, DB,
+        L, L, L, L, L, L, L, L, 
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L]
+    ,[
+        EDB, EDB, EDB, EDB, EDB, EDB, EDB, EDB,
+        EDB, EDB, EDB, EDB, EDB, EDB, EDB, EDB,
+        EDB, EDB, EDB, EDB, EDB, EDB, EDB, EDB,
+        EDB, EDB, EDB, EDB, EDB, EDB, EDB, EDB,
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L, 
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L]
+    ,[
+        EDB, EDB, EDB, EDB, EDB, EDB, EDB, EDB,
+        EDB, EDB, EDB, EDB, EDB, EDB, EDB, EDB,
+        EDB, EDB, EDB, EDB, EDB, EDB, EDB, EDB,
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L, 
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L]
+    ,[
+        EDB, EDB, EDB, EDB, EDB, EDB, EDB, EDB,
+        EDB, EDB, EDB, EDB, EDB, EDB, EDB, EDB, 
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L, 
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L]
+    ,[
+        EDB, EDB, EDB, EDB, EDB, EDB, EDB, EDB,
+        L, L, L, L, L, L, L, L, 
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L, 
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L]
+    ,[ #35
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L, 
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L, 
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L]
+    ,[
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L, 
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L, 
+        L, L, L, L, L, L, L, L,
+        L, L, B, B, B, B, L, L]
+    ,[
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L, 
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L, 
+        L, L, Bl, Bl, Bl, Bl, L, L,
+        L, Bl, Sb, Sb, Sb, G, Bl, L]
+    ,[
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L, 
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L,
+        L, L, Bl, Bl, Bl, Bl, L, L, 
+        L, Bl, Sb, Sb, Sb, G, Bl, L,
+        Bl, Sb, Sb, Sb, Sb, G, G, Bl]
+    ,[
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L, 
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L,
+        L, L, Bl, Bl, Bl, Bl, L, L,
+        L, Bl, Sb, Sb, Sb, G, Bl, L, 
+        Bl, Sb, Sb, Sb, Sb, G, G, Bl,
+        Bl, Sb, Sb, Sb, G, G, G, Bl]
+    ,[
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L, 
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L,
+        L, L, Bl, Bl, Bl, Bl, L, L,
+        L, Bl, Sb, Sb, Sb, G, Bl, L, 
+        Bl, Sb, Sb, Sb, Sb, G, G, Bl,
+        Bl, Sb, Sb, Sb, G, G, G, Bl]
+    ,[
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L, 
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L,
+        L, L, Bl, Bl, Bl, Bl, L, L,
+        L, Bl, Sb, Sb, Sb, G, Bl, L, 
+        Bl, Sb, Sb, Sb, Sb, G, G, Bl,
+        Bl, Sb, Sb, Sb, G, G, G, Bl]
+    ,[
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L, 
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L,
+        L, L, Bl, Bl, Bl, Bl, L, L,
+        L, Bl, Sb, Sb, Sb, G, Bl, L, 
+        Bl, Sb, Sb, Sb, Sb, G, G, Bl,
+        Bl, Sb, Sb, Sb, G, G, G, Bl]
+    ,[
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L, 
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L,
+        L, L, Bl, Bl, Bl, Bl, L, L,
+        L, Bl, Sb, Sb, Sb, G, Bl, L, 
+        Bl, Sb, Sb, Sb, Sb, G, G, Bl,
+        Bl, Sb, Sb, Sb, G, G, G, Bl]
+    ,[
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L, 
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L,
+        L, L, Bl, Bl, Bl, Bl, L, L,
+        L, Bl, Sb, Sb, Sb, G, Bl, L, 
+        Bl, Sb, Sb, Sb, Sb, G, G, Bl,
+        Bl, Sb, Sb, Sb, G, G, G, Bl]
+    ,[
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L, 
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L,
+        L, L, Bl, Bl, Bl, Bl, L, L,
+        L, Bl, Sb, Sb, Sb, G, Bl, L, 
+        Bl, Sb, Sb, Sb, Sb, G, G, Bl,
+        Bl, Sb, Sb, Sb, G, G, G, Bl]
+    ,[
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L, 
+        L, L, L, L, L, L, L, L,
+        L, L, L, L, L, L, L, L,
+        L, L, Bl, Bl, Bl, Bl, L, L,
+        L, Bl, Sb, Sb, Sb, G, Bl, L, 
+        Bl, Sb, Sb, Sb, Sb, G, G, Bl,
+        Bl, Sb, Sb, Sb, G, G, G, Bl]
     ]
-# Display the image 
-
-    #ayo check the colour trough the sensor    
+             
     #see if rgb sensor is black
     sense.set_pixels(frames[i])
     sleep(0.5)
